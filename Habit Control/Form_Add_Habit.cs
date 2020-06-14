@@ -22,9 +22,11 @@ namespace Habit_Control
             this.parentForm = parentForm;
             this.FormClosed += new FormClosedEventHandler(When_Form_Closed);
         }
+
         private void When_Form_Closed(object sender, FormClosedEventArgs e)
         {
             parentForm.Enabled = true;
+            ((Form1)parentForm).restartForm();
         }
 
         private void Button_Back_Click(object sender, EventArgs e)

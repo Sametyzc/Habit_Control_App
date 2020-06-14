@@ -48,13 +48,16 @@ namespace Habit_Control
                 comboBox_Habits.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
+
         public bool getDoHaveHabit()
         {
             return doHaveHabit;
         }
+
         private void When_Form_Closed(object sender, FormClosedEventArgs e)
         {
             parentForm.Enabled = true;
+            ((Form1)parentForm).restartForm();
         }
 
         private void Button_Accept_Click(object sender, EventArgs e)
@@ -71,9 +74,6 @@ namespace Habit_Control
                 {
                     if (file.Name.Equals(fileName))
                     {
-                        Console.WriteLine("*********************************************************");
-                        Console.WriteLine("Siliyoruz ey ahali");
-                        Console.WriteLine("*********************************************************");
                         file.Delete();
                         break;
                     }
@@ -81,7 +81,6 @@ namespace Habit_Control
                 MessageBox.Show("Silme işlemi başarı ile gerçekleşti.", "Geri Bildirim", MessageBoxButtons.OK);
                 this.Close();
             }
-
         }
 
         private void Button_Back_Click(object sender, EventArgs e)
