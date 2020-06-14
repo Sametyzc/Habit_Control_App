@@ -32,8 +32,8 @@
             this.Panel_Header = new System.Windows.Forms.Panel();
             this.Panel_Content = new System.Windows.Forms.Panel();
             this.Panel_Management = new System.Windows.Forms.Panel();
-            this.Button_Delete_Habit = new System.Windows.Forms.Button();
             this.Button_Add_Habit = new System.Windows.Forms.Button();
+            this.Button_Delete_Habit = new System.Windows.Forms.Button();
             this.Panel_Header.SuspendLayout();
             this.Panel_Management.SuspendLayout();
             this.SuspendLayout();
@@ -73,18 +73,6 @@
             this.Panel_Management.Size = new System.Drawing.Size(346, 60);
             this.Panel_Management.TabIndex = 3;
             // 
-            // Button_Delete_Habit
-            // 
-            this.Button_Delete_Habit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(58)))), ((int)(((byte)(51)))));
-            this.Button_Delete_Habit.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Button_Delete_Habit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
-            this.Button_Delete_Habit.Location = new System.Drawing.Point(3, 0);
-            this.Button_Delete_Habit.Name = "Button_Delete_Habit";
-            this.Button_Delete_Habit.Size = new System.Drawing.Size(173, 60);
-            this.Button_Delete_Habit.TabIndex = 2;
-            this.Button_Delete_Habit.Text = "Alışkanlık Sil";
-            this.Button_Delete_Habit.UseVisualStyleBackColor = false;
-            // 
             // Button_Add_Habit
             // 
             this.Button_Add_Habit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(168)))), ((int)(((byte)(97)))));
@@ -97,6 +85,19 @@
             this.Button_Add_Habit.Text = "Alışkanlık Ekle";
             this.Button_Add_Habit.UseVisualStyleBackColor = false;
             this.Button_Add_Habit.Click += new System.EventHandler(this.Button_Add_Habit_Click);
+            // 
+            // Button_Delete_Habit
+            // 
+            this.Button_Delete_Habit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(58)))), ((int)(((byte)(51)))));
+            this.Button_Delete_Habit.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Button_Delete_Habit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
+            this.Button_Delete_Habit.Location = new System.Drawing.Point(3, 0);
+            this.Button_Delete_Habit.Name = "Button_Delete_Habit";
+            this.Button_Delete_Habit.Size = new System.Drawing.Size(173, 60);
+            this.Button_Delete_Habit.TabIndex = 2;
+            this.Button_Delete_Habit.Text = "Alışkanlık Sil";
+            this.Button_Delete_Habit.UseVisualStyleBackColor = false;
+            this.Button_Delete_Habit.Click += new System.EventHandler(this.Button_Delete_Habit_Click);
             // 
             // Form1
             // 
