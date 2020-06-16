@@ -29,6 +29,7 @@ namespace Habit_Control
             setFileDict();
             LoadContent();
         }
+
         public void restartForm()
         {
             Controls.Clear();
@@ -36,6 +37,7 @@ namespace Habit_Control
             setFileDict();
             LoadContent();
         }
+
         private void setFileDict()
         {
             fileList.Clear();
@@ -83,8 +85,8 @@ namespace Habit_Control
 
                 count++;
             }
-
         }
+
         private void Button_Content_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -97,8 +99,11 @@ namespace Habit_Control
                 }
                 count++;
             }
-            MessageBox.Show(string.Format("Tiklanan {0}",fileList[count]), "Geri Bildirim", MessageBoxButtons.OK);
+            Form_Habit form_Habit = new Form_Habit(this,fileList[count]);
+            form_Habit.Show();
+            this.Enabled = false;
         }
+
         private void Button_Add_Habit_Click(object sender, EventArgs e)
         {
             Form_Add_Habit form_Add_Habit = new Form_Add_Habit(this);

@@ -82,6 +82,12 @@
     <Compile Include="Form_Delete_Habit.Designer.cs">
       <DependentUpon>Form_Delete_Habit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Habit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Habit.Designer.cs">
+      <DependentUpon>Form_Habit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Delete_Habit.resx">
       <DependentUpon>Form_Delete_Habit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Habit.resx">
+      <DependentUpon>Form_Habit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

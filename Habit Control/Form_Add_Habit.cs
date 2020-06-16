@@ -61,7 +61,8 @@ namespace Habit_Control
                 Text += "0";
             }
             Text += "\n";
-            Byte[] info = new UTF8Encoding(true).GetBytes(Text);
+
+            byte[] info = new UTF8Encoding(true).GetBytes(Text);
 
             file.Write(info, 0, info.Length);
             file.Close();
