@@ -26,6 +26,7 @@ namespace Habit_Control
         private void When_Form_Closed(object sender, FormClosedEventArgs e)
         {
             parentForm.Enabled = true;
+            parentForm.Visible = true;
             ((Form1)parentForm).restartForm();
         }
 

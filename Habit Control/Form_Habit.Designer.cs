@@ -219,7 +219,7 @@
             this.TPL_Cells.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TPL_Cells.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TPL_Cells.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TPL_Cells.Location = new System.Drawing.Point(27, 158);
+            this.TPL_Cells.Location = new System.Drawing.Point(27, 175);
             this.TPL_Cells.Name = "TPL_Cells";
             this.TPL_Cells.RowCount = 3;
             this.TPL_Cells.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));

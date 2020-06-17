@@ -34,6 +34,7 @@
             this.Panel_Management = new System.Windows.Forms.Panel();
             this.Button_Add_Habit = new System.Windows.Forms.Button();
             this.Button_Delete_Habit = new System.Windows.Forms.Button();
+            this.Button_Ticking = new System.Windows.Forms.Button();
             this.Panel_Header.SuspendLayout();
             this.Panel_Management.SuspendLayout();
             this.SuspendLayout();
@@ -59,17 +60,17 @@
             // Panel_Content
             // 
             this.Panel_Content.AutoScroll = true;
-            this.Panel_Content.BackColor = System.Drawing.Color.Silver;
+            this.Panel_Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Panel_Content.Location = new System.Drawing.Point(12, 61);
             this.Panel_Content.Name = "Panel_Content";
-            this.Panel_Content.Size = new System.Drawing.Size(346, 373);
+            this.Panel_Content.Size = new System.Drawing.Size(346, 484);
             this.Panel_Content.TabIndex = 3;
             // 
             // Panel_Management
             // 
             this.Panel_Management.Controls.Add(this.Button_Add_Habit);
             this.Panel_Management.Controls.Add(this.Button_Delete_Habit);
-            this.Panel_Management.Location = new System.Drawing.Point(12, 440);
+            this.Panel_Management.Location = new System.Drawing.Point(12, 617);
             this.Panel_Management.Name = "Panel_Management";
             this.Panel_Management.Size = new System.Drawing.Size(346, 60);
             this.Panel_Management.TabIndex = 3;
@@ -81,7 +82,7 @@
             this.Button_Add_Habit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
             this.Button_Add_Habit.Location = new System.Drawing.Point(170, 0);
             this.Button_Add_Habit.Name = "Button_Add_Habit";
-            this.Button_Add_Habit.Size = new System.Drawing.Size(173, 60);
+            this.Button_Add_Habit.Size = new System.Drawing.Size(176, 60);
             this.Button_Add_Habit.TabIndex = 0;
             this.Button_Add_Habit.Text = "Alışkanlık Ekle";
             this.Button_Add_Habit.UseVisualStyleBackColor = false;
@@ -92,23 +93,39 @@
             this.Button_Delete_Habit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(58)))), ((int)(((byte)(51)))));
             this.Button_Delete_Habit.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Button_Delete_Habit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
-            this.Button_Delete_Habit.Location = new System.Drawing.Point(3, 0);
+            this.Button_Delete_Habit.Location = new System.Drawing.Point(0, 0);
             this.Button_Delete_Habit.Name = "Button_Delete_Habit";
-            this.Button_Delete_Habit.Size = new System.Drawing.Size(173, 60);
+            this.Button_Delete_Habit.Size = new System.Drawing.Size(176, 60);
             this.Button_Delete_Habit.TabIndex = 2;
             this.Button_Delete_Habit.Text = "Alışkanlık Sil";
             this.Button_Delete_Habit.UseVisualStyleBackColor = false;
             this.Button_Delete_Habit.Click += new System.EventHandler(this.Button_Delete_Habit_Click);
+            // 
+            // Button_Ticking
+            // 
+            this.Button_Ticking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Button_Ticking.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.Button_Ticking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
+            this.Button_Ticking.Location = new System.Drawing.Point(12, 551);
+            this.Button_Ticking.Name = "Button_Ticking";
+            this.Button_Ticking.Size = new System.Drawing.Size(346, 60);
+            this.Button_Ticking.TabIndex = 4;
+            this.Button_Ticking.Text = "Alışkanlıklarına Tik Atmak İçin Tıkla";
+            this.Button_Ticking.UseVisualStyleBackColor = false;
+            this.Button_Ticking.Click += new System.EventHandler(this.Button_Ticking_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(370, 507);
+            this.ClientSize = new System.Drawing.Size(370, 690);
+            this.Controls.Add(this.Button_Ticking);
             this.Controls.Add(this.Panel_Management);
             this.Controls.Add(this.Panel_Content);
             this.Controls.Add(this.Panel_Header);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Alışkanlık Takip Uygulaması";
             this.Panel_Header.ResumeLayout(false);
@@ -126,6 +143,7 @@
         private System.Windows.Forms.Panel Panel_Management;
         private System.Windows.Forms.Button Button_Delete_Habit;
         private System.Windows.Forms.Button Button_Add_Habit;
+        private System.Windows.Forms.Button Button_Ticking;
     }
 }
 

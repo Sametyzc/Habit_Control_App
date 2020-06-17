@@ -54,8 +54,8 @@ namespace Habit_Control
         {
             labelList.Clear();
             buttonList.Clear();
-
             int count = 0;
+
             foreach (var file in fileList)
             {
                 //add label to content panel
@@ -99,9 +99,10 @@ namespace Habit_Control
                 }
                 count++;
             }
-            Form_Habit form_Habit = new Form_Habit(this,fileList[count]);
+            Form_Habit form_Habit = new Form_Habit(this, fileList[count]);
             form_Habit.Show();
             this.Enabled = false;
+            this.Visible = false;
         }
 
         private void Button_Add_Habit_Click(object sender, EventArgs e)
@@ -109,6 +110,7 @@ namespace Habit_Control
             Form_Add_Habit form_Add_Habit = new Form_Add_Habit(this);
             form_Add_Habit.Show();
             this.Enabled = false;
+            this.Visible = false;
         }
 
         private void Button_Delete_Habit_Click(object sender, EventArgs e)
@@ -118,11 +120,20 @@ namespace Habit_Control
             {
                 form_Delete_Habit.Show();
                 this.Enabled = false;
+                this.Visible = false;
             }
             else
             {
                 MessageBox.Show("Hiç bir alışkanlığınız yok!", "Geri Bildirim", MessageBoxButtons.OK);
             }
+        }
+
+        private void Button_Ticking_Click(object sender, EventArgs e)
+        {
+            Form_Tick_Habit form_Tick_Habit = new Form_Tick_Habit(this);
+            form_Tick_Habit.Show();
+            this.Enabled = false;
+            this.Visible = false;
         }
     }
 }

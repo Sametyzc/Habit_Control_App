@@ -11,19 +11,8 @@ using System.Windows.Forms;
 
 namespace Habit_Control
 {
-    struct Habit
-    {
-        public string Name;
-        public int repetitionNumber;
-        public DateTime startDate;
-        public DateTime endDate;
-        public string continuity;
-    }
     public partial class Form_Habit : Form
     {
-
-        System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("tr-TR");
-
         private Form parentForm;
 
         private string HabitsFolderPath = "./Habits";
@@ -50,6 +39,7 @@ namespace Habit_Control
         private void When_Form_Closed(object sender, FormClosedEventArgs e)
         {
             parentForm.Enabled = true;
+            parentForm.Visible = true;
         }
 
         private void Load_Habit()
@@ -97,13 +87,12 @@ namespace Habit_Control
 
         private void Load_Calendar()
         {
-            int dayCount = 0;
             DateTime currentDate = habit.startDate;
             for (int i = 0; i < TPL_Cells.RowCount; i += 2)
             {
                 for (int j = 0; j < TPL_Cells.ColumnCount; j++)
                 {
-                    if (i == 12 || (currentDate > habit.endDate) || (habit.continuity.Count() == 0))
+                    if ((currentDate > habit.endDate) || (habit.continuity.Count() == 0))
                     {
                         goto LoopEnd;
                     }
@@ -115,7 +104,9 @@ namespace Habit_Control
                     }
 
                     //Add date label to table panel layout
+                    Label label_status = new Label();
                     Label label_date = new Label();
+
                     label_date.BackColor = Color.Coral;
                     label_date.Dock = DockStyle.Fill;
                     label_date.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162)));
@@ -126,10 +117,15 @@ namespace Habit_Control
                     label_date.Text = currentDate.ToString("dd.MM.yyyy");
                     label_date.TextAlign = ContentAlignment.MiddleCenter;
 
+                    if (currentDate.ToString("dd MM yyyy").Equals(DateTime.Now.ToString("dd MM yyyy")))
+                    {
+                        label_date.Paint += new PaintEventHandler(label_date_Paint);
+                        label_status.Paint += new PaintEventHandler(label_date_Paint);
+                    }
                     TPL_Cells.Controls.Add(label_date, j, i);
 
                     //Add status label to table panel layout
-                    Label label_status = new Label();
+
                     label_status.Dock = DockStyle.Fill;
                     label_status.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
                     label_status.Name = "Label_Status" + j.ToString() + (i + 1).ToString();
@@ -157,6 +153,10 @@ namespace Habit_Control
             }
             LoopEnd:;
 
+        }
+        void label_date_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, (sender as Label).DisplayRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
     }
