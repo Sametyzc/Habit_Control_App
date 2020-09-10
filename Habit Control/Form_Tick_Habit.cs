@@ -27,6 +27,8 @@ namespace Habit_Control
         private Point shiftValue = new Point(200, 50);
         private Point startPoint = new Point(14, 14);
 
+        public int habitListCount;
+
         public Form_Tick_Habit(Form parentForm)
         {
             InitializeComponent();
@@ -35,6 +37,19 @@ namespace Habit_Control
             this.FormClosed += new FormClosedEventHandler(When_Form_Closed);
 
             setFileDict();
+            LoadContent();
+        }
+
+        public void restartForm()
+        {
+
+            Controls.Clear();
+            InitializeComponent();
+            setFileDict();
+            if (habitListCount == 0)
+            {
+                this.Close();
+            }
             LoadContent();
         }
 
@@ -86,20 +101,26 @@ namespace Habit_Control
                         habit.continuity = line;
                     }
                     else
+                    {
                         break;
+                    }
                     lineCount++;
                 }
                 for (DateTime dateTime = habit.startDate; dateTime <= habit.endDate; dateTime = dateTime.AddDays(habit.repetitionNumber))
                 {
                     if (dateTime.ToString("dd MM yyyy").Equals(DateTime.Now.ToString("dd MM yyyy")))
                     {
-                        habitList.Add(habit);
-                        indexOfrepetitionNumber[fileCount] = repetitionCount;
-                        fileCount++;
-                        break;
+                        if (habit.continuity[repetitionCount] == '0')
+                        {
+                            habitList.Add(habit);
+                            indexOfrepetitionNumber[fileCount] = repetitionCount;
+                            fileCount++;
+                            break;
+                        }
                     }
                     repetitionCount++;
                 }
+                habitListCount = habitList.Count;
             }
         }
 
@@ -171,6 +192,7 @@ namespace Habit_Control
             allLines[4] = newLine;
             File.WriteAllLines(HabitsFolderPath + "/" + habitList[count].Name + ".txt", allLines);
             MessageBox.Show(string.Format("{0} tarihine tik atma işlemi başarılı.", DateTime.Now.ToString("dd.MM.yyyy")), "Geri Bildirim", MessageBoxButtons.OK);
+            this.restartForm();
         }
     }
 }

@@ -39,7 +39,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Label_endDate = new System.Windows.Forms.Label();
             this.Label_endDate_Header = new System.Windows.Forms.Label();
-            this.Button_Accept = new System.Windows.Forms.Button();
             this.Button_Back = new System.Windows.Forms.Button();
             this.TLP_Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.TPL_Cells = new System.Windows.Forms.TableLayoutPanel();
@@ -163,19 +162,6 @@
             this.Label_endDate_Header.TabIndex = 10;
             this.Label_endDate_Header.Text = "Bitiş Tarihi";
             // 
-            // Button_Accept
-            // 
-            this.Button_Accept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(168)))), ((int)(((byte)(97)))));
-            this.Button_Accept.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_Accept.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Button_Accept.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
-            this.Button_Accept.Location = new System.Drawing.Point(927, 3);
-            this.Button_Accept.Name = "Button_Accept";
-            this.Button_Accept.Size = new System.Drawing.Size(158, 41);
-            this.Button_Accept.TabIndex = 7;
-            this.Button_Accept.Text = "Onayla";
-            this.Button_Accept.UseVisualStyleBackColor = false;
-            // 
             // Button_Back
             // 
             this.Button_Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(58)))), ((int)(((byte)(51)))));
@@ -197,8 +183,7 @@
             this.TLP_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.TLP_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLP_Buttons.Controls.Add(this.Button_Back, 0, 0);
-            this.TLP_Buttons.Controls.Add(this.Button_Accept, 2, 0);
-            this.TLP_Buttons.Location = new System.Drawing.Point(27, 665);
+            this.TLP_Buttons.Location = new System.Drawing.Point(27, 374);
             this.TLP_Buttons.Name = "TLP_Buttons";
             this.TLP_Buttons.RowCount = 1;
             this.TLP_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -223,16 +208,16 @@
             this.TPL_Cells.Name = "TPL_Cells";
             this.TPL_Cells.RowCount = 3;
             this.TPL_Cells.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.TPL_Cells.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.TPL_Cells.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.TPL_Cells.Size = new System.Drawing.Size(1088, 484);
+            this.TPL_Cells.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.TPL_Cells.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.TPL_Cells.Size = new System.Drawing.Size(1088, 193);
             this.TPL_Cells.TabIndex = 14;
             // 
             // Form_Habit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 753);
+            this.ClientSize = new System.Drawing.Size(1135, 435);
             this.Controls.Add(this.TPL_Cells);
             this.Controls.Add(this.TLP_Buttons);
             this.Controls.Add(this.panel3);
@@ -265,7 +250,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label Label_endDate;
         private System.Windows.Forms.Label Label_endDate_Header;
-        private System.Windows.Forms.Button Button_Accept;
         private System.Windows.Forms.Button Button_Back;
         private System.Windows.Forms.TableLayoutPanel TLP_Buttons;
         private System.Windows.Forms.TableLayoutPanel TPL_Cells;

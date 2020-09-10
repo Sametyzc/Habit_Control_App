@@ -131,9 +131,18 @@ namespace Habit_Control
         private void Button_Ticking_Click(object sender, EventArgs e)
         {
             Form_Tick_Habit form_Tick_Habit = new Form_Tick_Habit(this);
-            form_Tick_Habit.Show();
+            if (form_Tick_Habit.habitListCount == 0)
+            {
+                MessageBox.Show("Tik atilabilecek alışkanlık bulunamadı!", "Geri Bildirim", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                form_Tick_Habit.Show();
+            }
             this.Enabled = false;
             this.Visible = false;
         }
+
     }
 }
